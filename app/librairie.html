@@ -6,7 +6,6 @@
         <option value="artist">artiste</option>
         <option value="album">album</option>
         <option value="year">année</option>
-        <option value="duration">durée</option>
     </select>
 <table>
     <tr ng-model="tri">
@@ -14,8 +13,7 @@
         <td>Artiste</td>
         <td>Album</td>
         <td>Année</td>
-        <td>Durée</td>
-        <td></td>
+        <td>Supression</td>
     </tr>
     <tr row ng-repeat="song in songs | filter:recherche | orderBy:tri"></tr>
 </table>
