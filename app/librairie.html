@@ -1,5 +1,13 @@
 <div >
     <input type="text" ng-model="recherche">
+
+    <select ng-model="tri">
+        <option value="name">Nom</option>
+        <option value="artist">artiste</option>
+        <option value="album">album</option>
+        <option value="year">année</option>
+        <option value="duration">durée</option>
+    </select>
 <table>
     <tr ng-model="tri">
         <td>Nom</td>
