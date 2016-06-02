@@ -22,6 +22,7 @@ angular.module("mycontrollers", [])
         
        $rootScope.songs.removeItemByID(song); 
        $http.delete("/medias/" + song.id);
+        
        
     });
 })
