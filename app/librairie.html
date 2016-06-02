@@ -1,6 +1,7 @@
 <div >
+    <input type="text" ng-model="recherche">
 <table>
-    <tr>
+    <tr ng-model="tri">
         <td>Nom</td>
         <td>Artiste</td>
         <td>Album</td>
@@ -8,6 +9,6 @@
         <td>Durée</td>
         <td></td>
     </tr>
-    <tr row ng-repeat="song in songs"></tr>
+    <tr row ng-repeat="song in songs | filter:recherche | orderBy:tri"></tr>
 </table>
 </div>
