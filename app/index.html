@@ -60,6 +60,21 @@ body{width:100% !important;}
     white-space: nowrap;
     position: relative;
 }
+#edit .line{
+    display: block;
+    padding: 15px;
+    width: 300px;
+    margin:0 auto;
+}
+#edit .line label{
+    display: inline-block;
+    width:20%;
+    margin-right: 5%;
+}
+#edit .line input{
+    width:150px;
+    display: inline-block;
+}
 *{
     font-family: 'Vollkorn';
     font-size: 12px;
@@ -220,8 +235,10 @@ table tr:hover td{
 </style>
     </head>
     <body ng-app="MyApp">
-
-        <ng-view></ng-view>
+        <div style="display: block; text-align: center;">
+            <img src="logo.png" alt="" class="logo">
+        </div>
+            <ng-view></ng-view>
 
 
 

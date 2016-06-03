@@ -1,16 +1,24 @@
-<h1>Details</h1>
-
-Nom : <input type="text" ng-model="song.title">
-<br>
-Artiste : <input type="text" ng-model="song.artist">
-<br>
-Album : <input type="text" ng-model="song.album">
-<br>
-Année : <input type="text" ng-model="song.year">
-<br>
-<input type="button" value="Cancel" ng-click="onCancel()">
-<input type="button" value="Sauver" ng-click="onSave()">
-
+<h1>Editer la piste ... Waf !</h1>
+<div id="edit" style="text-align: center; padding-top: 30px;">
+    <div class="line">
+        <label for="songtitle">Nom :</label>
+        <input id="songtitle" type="text" ng-model="song.title">
+    </div>
+    <div class="line">
+        <label for="songartist">Artiste : </label>
+        <input id="songartist" type="text" ng-model="song.artist">
+    </div>
+    <div class="line">
+        <label for="songalbum">Album : </label>
+        <input id="songalbum" type="text" ng-model="song.album">
+    </div>
+    <div class="line">
+        <label for="songyear">Année :</label>
+        <input id="songyear" type="text" ng-model="song.year">
+    </div>
+    <input type="button" value="Cancel" ng-click="onCancel()">
+    <input type="button" value="Sauver" ng-click="onSave()">
+</div>
 <!--
 Créer un formulaire pour pouvoir modifier la chanson fournie
 le formulaire doit avoir deux boutons : Sauver, annuler

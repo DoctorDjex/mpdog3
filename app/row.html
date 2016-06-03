@@ -3,7 +3,9 @@
     <td>{{song.artist}}</td>
     <td>{{song.album}}</td>
     <td>{{song.year}}</td>
-    <td><input type='button' value="x" ng-click="$emit('remove', song)"></td>
+    <td>
+        <a href="" ng-click="$emit('remove', song)"><img src="supprimer.png" alt=""></a>
+    </td>
     <!--  ng-click="$emit('remove', song)" -->
 </tr>
 
