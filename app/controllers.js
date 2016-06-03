@@ -1,49 +1,30 @@
-
 angular.module("mycontrollers", [])
     
-//$route, $location, $routeParams, $routeProvider
-
-.controller("LibrairieController", function($rootScope, $http,$interval)
-{    
-    //$scope.songs = mp3Model.librairie.songs;
-    
-    //if ($rootScope.songs == undefined){
+.controller("LibrairieController", function($rootScope, $http,$interval){
     function refreshPage(){
-
         $http.get("/medias").success(function(data){
             $rootScope.songs = data;
-            console.log('ludo aime le poulet');
+            console.log('refresh');
         });
     }
     refreshPage();
     $interval(refreshPage, 3000);
-        
-    //}
-
-     // coder la suppression d'un mp3
-
-    //$scope.onRemove = function(song)
+    
     $rootScope.$on("remove", function(event, song){
         
        $rootScope.songs.removeItemByID(song); 
        $http.delete("/medias/" + song.id);
         
-       
     });
 })
-
-
+    
 .controller("ContactController", function(){
     
-    
-    
 })
-
-
+    
 .controller("SongController", function($scope, $rootScope, $routeParams, $location, $http){
     
     var songid = $routeParams.id;
-    
     var song;
     for (var i = 0; i < $rootScope.songs.length; i++)
     {
@@ -77,18 +58,8 @@ angular.module("mycontrollers", [])
                 break;
             }
         }
-
         $http.put("/medias/" + songid, $scope.song ).success( function(){
             $location.path("/");
         })
-        
-        
     }
-    
 });
-
-
-
-
-
-

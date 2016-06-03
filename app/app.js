@@ -1,8 +1,6 @@
 var app = angular.module("MyApp", ["ngRoute", "mycontrollers", "mydirectives", "myFilters"]);
 
-
 app.config(function($routeProvider){
-    
     $routeProvider
     .when("/", {
         templateUrl : "librairie.html",
