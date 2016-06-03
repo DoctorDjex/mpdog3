@@ -1,7 +1,12 @@
-<div >
-    <input type="text" ng-model="recherche">
+<div style="display: block; text-align: center;">
+    <img src="logo.png" alt="" class="logo">
+</div>
+<h1 style="text-align: center; text-transform: uppercase;">Votre liste de mp3 ! WAF !</h1>
+<div style="display:block; width:100%; text-align:center; padding-top: 20px;" >
 
-    <select ng-model="tri">
+    <input id="search" type="text" ng-model="recherche" style="display:inline-block" placeholder="Rechercher">
+    <label for="filter">Filtrer par:</label>
+    <select id="filter" ng-model="tri" style="display:inline-block">
         <option value="tile">Nom</option>
         <option value="artist">artiste</option>
         <option value="album">album</option>
