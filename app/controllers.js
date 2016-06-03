@@ -3,15 +3,20 @@ angular.module("mycontrollers", [])
     
 //$route, $location, $routeParams, $routeProvider
 
-.controller("LibrairieController", function($rootScope, $http)
+.controller("LibrairieController", function($rootScope, $http,$interval)
 {    
     //$scope.songs = mp3Model.librairie.songs;
     
     //if ($rootScope.songs == undefined){
-        
+    function refreshPage(){
+
         $http.get("/medias").success(function(data){
             $rootScope.songs = data;
+            console.log('ludo aime le poulet');
         });
+    }
+    refreshPage();
+    $interval(refreshPage, 3000);
         
     //}
 
