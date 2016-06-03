@@ -3,7 +3,9 @@
     <td>{{song.artist}}</td>
     <td>{{song.album}}</td>
     <td>{{song.year}}</td>
-    <td><a href="#/song/{{song.id}}"><img src="editer.png" alt=""></a></td>
+    <td>
+        <a href="#/song/{{song.id}}"><img src="editer.png" style="width:32px;height:auto; " alt=""></a>
+    </td>
     <td>
         <a href="" ng-click="$emit('remove', song)"><img src="supprimer.png" alt=""></a>
     </td>
