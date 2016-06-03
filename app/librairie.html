@@ -7,18 +7,18 @@
     <input id="search" type="text" ng-model="recherche" style="display:inline-block" placeholder="Rechercher">
     <label for="filter">Filtrer par:</label>
     <select id="filter" ng-model="tri" style="display:inline-block">
-        <option value="tile">Nom</option>
-        <option value="artist">artiste</option>
-        <option value="album">album</option>
-        <option value="year">année</option>
+        <option value="title">Titre</option>
+        <option value="artist">Artiste</option>
+        <option value="album">Album</option>
+        <option value="year">Année</option>
     </select>
 <table>
     <tr ng-model="tri">
-        <td>Nom</td>
+        <td>Titre</td>
         <td>Artiste</td>
         <td>Album</td>
         <td>Année</td>
-        <td>Supression</td>
+        <td>Supprimer</td>
     </tr>
 
     <tr row ng-repeat="song in songs | filter:recherche | orderBy:tri"></tr>
